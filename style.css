@@ -26,8 +26,8 @@ body {
 }
 
 .profile-photo {
-    flex: 0 0 100%; /* Profile photo takes full width on smaller screens */
-    text-align: center; /* Center image */
+    flex: 0 0 100%; 
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -39,29 +39,29 @@ body {
 }
 
 .header-content {
-    flex: 1; /* Content takes remaining space */
-    text-align: center; /* Center align content on smaller screens */
+    flex: 1; 
+    text-align: center; 
 }
 
 .header-content h1 {
-    font-size: 24px; /* Adjust size for smaller screens */
+    font-size: 24px; 
     color: #2c3e50;
     margin-bottom: 10px;
 }
 
 .header-content p {
     margin: 5px 0;
-    word-wrap: break-word; /* Prevent content from overflowing */
+    word-wrap: break-word; 
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .cv-header {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; 
     }
     
     .header-content p {
-        font-size: 14px; /* Adjust text size for readability */
+        font-size: 14px; 
     }
 }
 
