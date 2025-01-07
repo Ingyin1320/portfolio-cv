@@ -1,79 +1,64 @@
-/* General Reset */
+/* General reset for margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Styles for the body */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Header Section */
+/* Header styling */
 .cv-header {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Ensures content wraps within the container */
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Centers the content horizontally */
+  background-color: #f4f4f4;
+  padding: 20px 15px; /* Adds padding inside the header */
+  text-align: center; /* Center-aligns text inside the header */
 }
 
 .profile-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
+  width: 100px; /* Sets a fixed width for the profile photo */
+  height: 100px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 15px;
+}
+
+.header-content {
+  max-width: 600px; /* Limits the header content width */
+  word-wrap: break-word; /* Ensures long text wraps within the container */
+  margin: 0 auto; /* Centers the content horizontally */
 }
 
 .header-content h1 {
-    font-size: 28px;
-    color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .header-content p {
-    margin: 5px 0;
+  margin-bottom: 5px;
+  font-size: 1rem;
 }
 
-/* Content Section */
-.cv-content .section {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.header-content strong {
+  font-weight: bold;
+  color: #333;
 }
 
-.cv-content h2 {
-    color: #3498db;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .cv-header {
+    flex-direction: column; /* Stacks the items vertically */
+  }
 
-.cv-content ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-.cv-content ul li {
-    margin-bottom: 5px;
-}
-
-.experience-item h3 {
-    font-size: 18px;
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-/* Footer Section */
-.cv-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #7f8c8d;
+  .header-content {
+    padding: 0 15px; /* Adds padding to avoid text touching the edges */
+  }
 }
