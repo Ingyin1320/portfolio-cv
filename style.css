@@ -77,13 +77,3 @@ body {
     margin-top: 20px;
     color: #7f8c8d;
 }
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .cv-header {
-    flex-direction: column; /* Stacks the items vertically */
-  }
-
-  .header-content {
-    padding: 0 15px; /* Adds padding to avoid text touching the edges */
-  }
