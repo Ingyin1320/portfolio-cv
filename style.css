@@ -16,6 +16,7 @@ body {
 /* Header Section */
 .cv-header {
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
     background-color: #ffffff;
     padding: 20px;
@@ -24,21 +25,44 @@ body {
     margin-bottom: 20px;
 }
 
+.profile-photo {
+    flex: 0 0 100%; /* Profile photo takes full width on smaller screens */
+    text-align: center; /* Center image */
+    margin-bottom: 20px;
+}
+
 .profile-photo img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
     object-fit: cover;
 }
 
+.header-content {
+    flex: 1; /* Content takes remaining space */
+    text-align: center; /* Center align content on smaller screens */
+}
+
 .header-content h1 {
-    font-size: 28px;
+    font-size: 24px; /* Adjust size for smaller screens */
     color: #2c3e50;
+    margin-bottom: 10px;
 }
 
 .header-content p {
     margin: 5px 0;
+    word-wrap: break-word; /* Prevent content from overflowing */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .cv-header {
+        flex-direction: column; /* Stack content vertically */
+    }
+    
+    .header-content p {
+        font-size: 14px; /* Adjust text size for readability */
+    }
 }
 
 /* Content Section */
